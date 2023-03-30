@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, Routes, Route } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 import "./NavBar.css";
 
@@ -11,8 +11,8 @@ const Navbar = () => {
     <div className="navBar">
       <ul>
         <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>React/Django JWT</b>
+          <Link to="/home" style={{ textDecoration: "none", color: "white" }}>
+            <b>YouVideos</b>
           </Link>
         </li>
         <li>
