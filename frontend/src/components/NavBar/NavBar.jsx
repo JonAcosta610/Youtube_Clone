@@ -16,10 +16,10 @@ const Navbar = ({setBoolean}) => {
           </Link>
         </li>
         <li>
-          {user ? (
-            <button onClick={logoutUser}>Logout</button>
+        {user ? (
+           <Link to="/"> <button onClick={logoutUser}>Logout</button> </Link>
           ) : (
-            <button onClick={navigate("/login")}>Login</button>
+            <Link to="login"><button>Login</button></Link>
           )}
         </li>
       </ul>
