@@ -27,7 +27,7 @@ const Search = () => {
             <button onClick={handleSearchChange}>Search</button>
             {videos.map((video) => (
                 <Link to={`${video.id.videoId}`}>
-                    <img src={`${video.snippet.thumbnails.default.url}`}></img>
+                    <img style={{width: 250, height: 160, padding: 10}} src={`${video.snippet.thumbnails.default.url}`}></img>
                 </Link>
              ))}
 
