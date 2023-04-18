@@ -10,7 +10,6 @@ import axios from "axios";
 
 const HomePage = () => {
   const [videos, setVideos] = useState([])
-
   useEffect(async () => {
       let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?relatedToVideoId=il3TSLI7Aqg&type=video&key=AIzaSyBtCSiUHpyDxaFxJ5sA5kPcCeH-4udJkTU&part=snippet`
       )
@@ -24,7 +23,7 @@ const HomePage = () => {
       <div class='video-player'>
         {videos.map((video) => (
           <Link to={`${video.id.videoId}`}>
-            <img src={`${video.snippet.thumbnails.default.url}`}></img>
+            <img src={`${video.snippet.thumbnails.default.url}`} style={{width: 250, height: 160, padding: 10}} ></img>
           </Link>
         ))}
       </div>
